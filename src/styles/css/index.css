@@ -1,6 +1,3 @@
-body {
-  background: red !important;
-}
 .submit-button {
   background: var(--primary-background);
   color: var(--primary-color);
