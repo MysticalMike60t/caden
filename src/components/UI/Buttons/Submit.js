@@ -1,50 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styles from "../../../styles";
-import css from "./Submit.style";
-
-console.log(styles); // Add this line to log the styles object
 
 const getButtonStyles = (type) => {
-  const [hovering, setHovering] = useState(false);
   switch (type) {
     case "submit":
-      console.log(
-        css(
-          styles.defaults.buttons.primary.background,
-          styles.defaults.buttons.primary.color,
-          styles.defaults.buttons.primary.border.color,
+      return {
+        "--primary-background": styles.defaults.buttons.primary.background,
+        "--primary-color": styles.defaults.buttons.primary.color,
+        "--primary-border": styles.defaults.buttons.primary.border,
+        "--primary-hover-background":
           styles.defaults.buttons.primary.hover.background,
-          styles.defaults.buttons.primary.hover.color,
-          styles.defaults.buttons.primary.hover.border.color
-        )
-      );
-      return css(
-        styles.defaults.buttons.primary.background,
-        styles.defaults.buttons.primary.color,
-        styles.defaults.buttons.primary.border.color,
-        styles.defaults.buttons.primary.hover.background,
-        styles.defaults.buttons.primary.hover.color,
-        styles.defaults.buttons.primary.hover.border.color
-      );
+        "--primary-hover-color": styles.defaults.buttons.primary.hover.color,
+        "--primary-hover-border": styles.defaults.buttons.primary.hover.border,
+      };
     case "reset":
-      return css(
-        styles.defaults.buttons.danger.background,
-        styles.defaults.buttons.primary.color,
-        styles.defaults.buttons.primary.border.color,
-        styles.defaults.buttons.primary.hover.background,
-        styles.defaults.buttons.primary.hover.color,
-        styles.defaults.buttons.primary.hover.border.color
-      );
+      return {
+        "--primary-background": styles.defaults.buttons.danger.background,
+        "--primary-color": styles.defaults.buttons.danger.color,
+        "--primary-border": styles.defaults.buttons.danger.border,
+        "--primary-hover-background":
+          styles.defaults.buttons.danger.hover.background,
+        "--primary-hover-color": styles.defaults.buttons.danger.hover.color,
+        "--primary-hover-border": styles.defaults.buttons.danger.hover.border,
+      };
     default:
-      return css(
-        styles.defaults.buttons.dark.background,
-        styles.defaults.buttons.dark.color,
-        styles.defaults.buttons.dark.border.color,
-        styles.defaults.buttons.dark.hover.background,
-        styles.defaults.buttons.dark.hover.color,
-        styles.defaults.buttons.dark.hover.border.color
-      );
+      return {
+        "--primary-background": styles.defaults.buttons.dark.background,
+        "--primary-color": styles.defaults.buttons.dark.color,
+        "--primary-border": styles.defaults.buttons.dark.border,
+        "--primary-hover-background":
+          styles.defaults.buttons.dark.hover.background,
+        "--primary-hover-color": styles.defaults.buttons.dark.hover.color,
+        "--primary-hover-border": styles.defaults.buttons.dark.hover.border,
+      };
   }
 };
 
@@ -57,14 +46,7 @@ const Submit = ({
   const style = getButtonStyles(type);
 
   return (
-    <button
-      type={type}
-      className={className}
-      style={hovering ? { ...style.base, ...style.hover } : style.base}
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
-      {...props}
-    >
+    <button type={type} className={className} style={style} {...props}>
       <span className="button-content">{children}</span>
     </button>
   );
