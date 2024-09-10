@@ -1,8 +1,11 @@
 {
-  "name": "caden",
+  "name": "@MysticalMike60t/cadenf",
   "version": "1.0.2",
   "description": "UI Npm Package",
   "main": "lib/index.js",
+  "publishConfig": {
+    "@MysticalMike60t:registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "babel src --out-dir lib"
   },
