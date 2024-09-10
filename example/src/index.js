@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Buttons, Layout } from '../lib'; // Import your components here
+import { Buttons, Layout } from '../../lib'; // Import your components here
 
 const App = () => (
   <div>

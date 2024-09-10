@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "../../../styles";
-import "./Submit.css";
+import "./submit.css";
 
 const getButtonStyles = (type) => {
   switch (type) {
@@ -57,6 +57,11 @@ Submit.propTypes = {
   className: PropTypes.string,
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   children: PropTypes.node.isRequired,
+};
+
+Submit.defaultProps = {
+  className: "submit-button",
+  type: "button",
 };
 
 export default Submit;

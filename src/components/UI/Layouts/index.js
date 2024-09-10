@@ -1,7 +1,7 @@
-import Page from './Page';
+import Pages from './Pages';
 
 const Layout = {
-  Page,
+  Pages,
 };
 
 export default Layout;
