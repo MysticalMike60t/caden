@@ -22,8 +22,5 @@ module.exports = [
       // Add or override rules here
     }
   },
-  {
-    // Add or merge other configurations directly here if needed
-    // e.g., eslint:recommended, plugin:react/recommended
-  }
+  // Include additional configuration objects if needed
 ];
