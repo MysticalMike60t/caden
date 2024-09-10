@@ -1,7 +1,7 @@
 import Pages from './Pages';
 
-const Layout = {
+const Layouts = {
   Pages,
 };
 
-export default Layout;
+export default Layouts;

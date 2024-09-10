@@ -1,7 +1,8 @@
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js", // Your entry point
+  entry: "./example/src/index.js", // Your entry point
   mode: "development", // Development mode
   output: {
     path: path.resolve(__dirname, "./example/public"), // Output directory
@@ -26,4 +27,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "**/*.css", to: "../../lib/[path][name][ext]", context: "src" },
+      ],
+    }),
+  ],
 };
