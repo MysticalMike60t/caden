@@ -13,6 +13,12 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: if [ -d "lib" ]; then echo "lib directory exists"; else echo "lib directory does not exist"; fi
+      - name: Upload lib directory
+        uses: actions/upload-artifact@v3
+        with:
+          name: lib
+          path: lib/
+
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
@@ -22,6 +28,11 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
+      - name: Download lib directory
+        uses: actions/download-artifact@v3
+        with:
+          name: lib
+          path: lib/
       - run: npm ci
       - run: ls -R lib
       - run: npm publish
