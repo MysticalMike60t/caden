@@ -1,6 +1,6 @@
 {
   "name": "caden",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "UI Npm Package",
   "main": "lib/index.js",
   "files": [
