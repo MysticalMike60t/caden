@@ -8,8 +8,6 @@
     "README.md",
     "package.json",
     "package-lock.json",
-    "eslint.config.js",
-    ".babelrc",
     "LICENSE"
   ],
   "scripts": {
