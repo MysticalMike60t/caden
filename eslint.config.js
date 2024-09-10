@@ -5,11 +5,11 @@ module.exports = [
   {
     languageOptions: {
       parserOptions: {
+        ecmaVersion: 12,
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
-        },
-        ecmaVersion: 12,
-        sourceType: 'module'
+        }
       },
       globals: {
         // Define global variables here if needed
@@ -19,8 +19,9 @@ module.exports = [
       react: reactPlugin
     },
     rules: {
-      // Add or override rules here
+      'no-unused-vars': 'warn',
+      'react/jsx-uses-react': 'error',
+      'react/jsx-uses-vars': 'error'
     }
-  },
-  // Include additional configuration objects if needed
+  }
 ];

@@ -2,6 +2,7 @@ const path = require("path");
 
 module.exports = {
   entry: "./src/index.js", // Your entry point
+  mode: "development", // Development mode
   output: {
     path: path.resolve(__dirname, "./example/public"), // Output directory
     filename: "bundle.js", // Output bundle filename
