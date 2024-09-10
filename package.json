@@ -1,10 +1,10 @@
 {
   "name": "caden",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "UI Npm Package",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "files": [
-    "src/",
+    "lib/",
     "README.md",
     "package.json",
     "package-lock.json",
