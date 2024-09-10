@@ -1,4 +1,4 @@
-import UI from "./components/UI";
+import UI from "./UI";
 import Functions from "./Functions";
 import "./styles/css/index.css";
 
