@@ -40,13 +40,31 @@ const getButtonStyles = (type) => {
 const Submit = ({
   className = "submit-button",
   type = "button",
+  uniLabel,
+  useInput = false,
   children,
   ...props
 }) => {
   const style = getButtonStyles(type);
 
-  return (
-    <button type={type} className={className} style={style} {...props}>
+  return useInput ? (
+    <input
+      type={type}
+      className={className}
+      style={style}
+      aria-label={uniLabel}
+      title={uniLabel}
+      {...props}
+    />
+  ) : (
+    <button
+      type={type}
+      className={className}
+      style={style}
+      aria-label={uniLabel}
+      title={uniLabel}
+      {...props}
+    >
       <span className="button-content">{children}</span>
     </button>
   );
@@ -55,6 +73,8 @@ const Submit = ({
 Submit.propTypes = {
   className: PropTypes.string,
   type: PropTypes.oneOf(["button", "submit", "reset"]),
+  uniLabel: PropTypes.string,
+  useInput: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };
 
