@@ -59,9 +59,4 @@ Submit.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-Submit.defaultProps = {
-  className: "submit-button",
-  type: "button",
-};
-
 export default Submit;

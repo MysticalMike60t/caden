@@ -7,7 +7,8 @@
     "@MysticalMike60t:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
-    "build": "webpack && babel src --out-dir lib",
+    "webpack": "webpack",
+    "build": "babel src --out-dir lib && webpack",
     "test": "parcel example/public/index.html",
     "test-build": "parcel build example/public/index.html",
     "test-start": "parcel serve example/public/index.html",
@@ -29,6 +30,9 @@
     "@babel/preset-react": "^7.24.7",
     "@eslint/eslintrc": "^3.1.0",
     "babel-loader": "^9.1.3",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "cpx": "^1.5.0",
     "css-loader": "^7.1.2",
     "eslint-plugin-react": "^7.35.2",
     "parcel": "^2.12.0",

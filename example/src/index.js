@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Buttons, Layout } from '../../lib'; // Import your components here
+import { UI } from '../../lib'; // Import your components here
 
 const App = () => (
   <div>
-    <Layout.Page.Home />
-    <Buttons.Submit />
+    <UI.Layouts.Pages.Home />
+    <UI.Buttons.Submit>
+      Submit
+    </UI.Buttons.Submit>
   </div>
 );
 
