@@ -1,6 +1,6 @@
 {
   "name": "@MysticalMike60t/cadenf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "UI Npm Package",
   "main": "lib/index.js",
   "publishConfig": {
