@@ -1,40 +1,47 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "../../../styles";
-import "./submit.css";
+import css from "./Submit.style";
+
+console.log(styles); // Add this line to log the styles object
 
 const getButtonStyles = (type) => {
   switch (type) {
     case "submit":
-      return {
-        "--primary-background": styles.defaults.buttons.primary.background,
-        "--primary-color": styles.defaults.buttons.primary.color,
-        "--primary-border": styles.defaults.buttons.primary.border,
-        "--primary-hover-background":
-          styles.defaults.buttons.primary.hover.background,
-        "--primary-hover-color": styles.defaults.buttons.primary.hover.color,
-        "--primary-hover-border": styles.defaults.buttons.primary.hover.border,
-      };
+      console.log(css(
+        styles.defaults.buttons.primary.background,
+        styles.defaults.buttons.primary.color,
+        styles.defaults.buttons.primary.border.color,
+        styles.defaults.buttons.primary.hover.background,
+        styles.defaults.buttons.primary.hover.color,
+        styles.defaults.buttons.primary.hover.border.color
+      ));
+      return css(
+        styles.defaults.buttons.primary.background,
+        styles.defaults.buttons.primary.color,
+        styles.defaults.buttons.primary.border.color,
+        styles.defaults.buttons.primary.hover.background,
+        styles.defaults.buttons.primary.hover.color,
+        styles.defaults.buttons.primary.hover.border.color
+      );
     case "reset":
-      return {
-        "--primary-background": styles.defaults.buttons.danger.background,
-        "--primary-color": styles.defaults.buttons.danger.color,
-        "--primary-border": styles.defaults.buttons.danger.border,
-        "--primary-hover-background":
-          styles.defaults.buttons.danger.hover.background,
-        "--primary-hover-color": styles.defaults.buttons.danger.hover.color,
-        "--primary-hover-border": styles.defaults.buttons.danger.hover.border,
-      };
+      return css(
+        styles.defaults.buttons.danger.background,
+        styles.defaults.buttons.primary.color,
+        styles.defaults.buttons.primary.border.color,
+        styles.defaults.buttons.primary.hover.background,
+        styles.defaults.buttons.primary.hover.color,
+        styles.defaults.buttons.primary.hover.border.color
+      );
     default:
-      return {
-        "--primary-background": styles.defaults.buttons.dark.background,
-        "--primary-color": styles.defaults.buttons.dark.color,
-        "--primary-border": styles.defaults.buttons.dark.border,
-        "--primary-hover-background":
-          styles.defaults.buttons.dark.hover.background,
-        "--primary-hover-color": styles.defaults.buttons.dark.hover.color,
-        "--primary-hover-border": styles.defaults.buttons.dark.hover.border,
-      };
+      return css(
+        styles.defaults.buttons.dark.background,
+        styles.defaults.buttons.dark.color,
+        styles.defaults.buttons.dark.border.color,
+        styles.defaults.buttons.dark.hover.background,
+        styles.defaults.buttons.dark.hover.color,
+        styles.defaults.buttons.dark.hover.border.color
+      );
   }
 };
 

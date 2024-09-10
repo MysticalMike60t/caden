@@ -1,12 +1,11 @@
-const path = require("path");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: "./example/src/index.js", // Your entry point
-  mode: "development", // Development mode
+  entry: './testing/index.js',
   output: {
-    path: path.resolve(__dirname, "./example/public"), // Output directory
-    filename: "bundle.js", // Output bundle filename
+    path: path.resolve(__dirname, 'testing'),
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -14,24 +13,23 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-            plugins: ["@babel/plugin-transform-modules-commonjs"],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
       },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"], // Process CSS files
-      },
     ],
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'public'),
+    compress: true,
+    port: 3000,
+  },
+  mode: 'development', // Add this line to use the development build
   plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: "**/*.css", to: "../../lib/[path][name][ext]", context: "src" },
-      ],
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development'),
     }),
   ],
 };
