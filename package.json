@@ -1,11 +1,8 @@
 {
-  "name": "@MysticalMike60t/caden",
-  "version": "1.0.5",
+  "name": "caden",
+  "version": "1.0.6",
   "description": "UI Npm Package",
   "main": "lib/index.js",
-  "publishConfig": {
-    "@MysticalMike60t:registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "webpack": "webpack",
     "build": "babel src --out-dir lib && webpack",
