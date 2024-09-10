@@ -1,3 +1,18 @@
 body {
-    background: red !important;
+  background: red !important;
+}
+.submit-button {
+  background: var(--primary-background);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-border);
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: 100ms ease all;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: var(--primary-hover-background);
+  color: var(--primary-hover-color);
+  border: 1px solid var(--primary-hover-border);
 }
