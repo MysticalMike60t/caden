@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "../../../styles";
-import "./Submit.css";
+import "./submit.css";
 
 const getButtonStyles = (type) => {
   switch (type) {

@@ -7,14 +7,16 @@
     "@MysticalMike60t:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "test": "parcel example/public/index.html"
+    "build": "webpack && babel src --out-dir lib",
+    "test": "parcel example/public/index.html",
+    "test-build": "parcel build example/public/index.html",
+    "test-start": "parcel serve example/public/index.html",
+    "lint": "npx eslint src/**/*.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "parcel": "^2.12.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -24,6 +26,13 @@
     "@babel/core": "^7.25.2",
     "@babel/plugin-transform-modules-commonjs": "^7.24.8",
     "@babel/preset-env": "^7.25.4",
-    "@babel/preset-react": "^7.24.7"
+    "@babel/preset-react": "^7.24.7",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^7.1.2",
+    "parcel": "^2.12.0",
+    "parcel-bundler": "^1.12.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
   }
 }
