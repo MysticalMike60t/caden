@@ -1,26 +1,29 @@
 // eslint.config.js
+const reactPlugin = require('eslint-plugin-react');
+
 module.exports = [
-    {
-      languageOptions: {
-        parserOptions: {
-          ecmaFeatures: {
-            jsx: true
-          },
-          ecmaVersion: 12,
-          sourceType: 'module'
+  {
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
         },
-        globals: {
-          // Define global variables here if needed
-        }
+        ecmaVersion: 12,
+        sourceType: 'module'
       },
-      plugins: ['react'],
-      rules: {
-        // Add or override rules here
+      globals: {
+        // Define global variables here if needed
       }
     },
-    {
-      // Add or merge other configurations directly here if needed
-      // e.g., eslint:recommended, plugin:react/recommended
+    plugins: {
+      react: reactPlugin
+    },
+    rules: {
+      // Add or override rules here
     }
-  ];
-  
+  },
+  {
+    // Add or merge other configurations directly here if needed
+    // e.g., eslint:recommended, plugin:react/recommended
+  }
+];
