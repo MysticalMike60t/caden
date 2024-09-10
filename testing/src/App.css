@@ -29,13 +29,36 @@
 }
 
 .container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   gap: 10px;
+  padding: 20px;
   padding-top: 50px;
   padding-bottom: 100px;
+}
+
+.container > .section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.container > .section > .section-title {
+  width: 100%;
+  text-align: left;
+}
+
+.container > .section > .section-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
 }
 
 @keyframes App-logo-spin {
