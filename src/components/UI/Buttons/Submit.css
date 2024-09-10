@@ -1,0 +1,11 @@
+.submit-button {
+  background: var(--primary-background);
+  color: var(--primary-color);
+  border: var(--primary-border);
+}
+
+.submit-button:hover {
+  background: var(--primary-hover-background);
+  color: var(--primary-hover-color);
+  border: var(--primary-hover-border);
+}
