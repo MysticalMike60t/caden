@@ -54,6 +54,6 @@ jobs:
           path: lib/
       - run: npm ci
       - run: ls -R lib
-      - run: npm publish
+      - run: npm publish --registry=https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
