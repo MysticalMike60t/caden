@@ -13,7 +13,15 @@ function App() {
       <div className="section">
         <h1 className="section-title">Buttons</h1>
         <div className="section-content">
-          <Caden.UI.Buttons.Submit>Submit</Caden.UI.Buttons.Submit>
+          <Caden.UI.Buttons.Default>Default Button</Caden.UI.Buttons.Default>
+          <Caden.UI.Buttons.Submit>Submit Button</Caden.UI.Buttons.Submit>
+        </div>
+      </div>
+      <div className="section">
+        <h1 className="section-title">Links</h1>
+        <div className="section-content">
+          <Caden.UI.Links.Default>Default Link</Caden.UI.Links.Default>
+          <Caden.UI.Links.Default filled={true}>Default Link Filled</Caden.UI.Links.Default>
         </div>
       </div>
     </div>
