@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "../../../styles";
+import styles from "../../styles";
 
 const getButtonStyles = (type) => {
   switch (type) {
@@ -38,7 +38,7 @@ const getButtonStyles = (type) => {
 };
 
 const Submit = ({
-  className = "submit-button",
+  className = "caden-ui-buttons-submit",
   type = "button",
   uniLabel,
   useInput = false,

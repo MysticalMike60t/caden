@@ -1,3 +1,72 @@
+@import "./variables.css";
+
+* a {
+  text-decoration: none;
+}
+
+.caden-ui-buttons-default {
+  align-items: center;
+  background: rgba(46, 46, 46, 1);
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+}
+.caden-ui-buttons-default:hover {
+  background: rgba(57, 57, 57, 1);
+}
+
+.caden-ui-buttons-submit {
+  align-items: center;
+  background: rgba(46, 46, 46, 1);
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+}
+.caden-ui-buttons-submit:hover {
+  background: rgba(57, 57, 57, 1);
+}
+
+.caden-ui-links-default {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.caden-ui-links-default-filled {
+  align-items: center;
+  background: rgba(46, 46, 46, 1);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+.caden-ui-links-default-filled:hover {
+  background: rgba(57, 57, 57, 1);
+}
+
 .submit-button {
   background: var(--primary-background);
   color: var(--primary-color);

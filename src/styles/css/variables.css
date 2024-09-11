@@ -1,0 +1,11 @@
+/* src/styles/css/variables.css */
+:root {
+  --primary-color: #ae7eec;
+  --primary-color-rgb: 174, 126, 236;
+  --primary-color-rgba: rgba(174, 126, 236, 1);
+  --primary-color-hsl: hsl(270, 60%, 70%);
+  --primary-color-hover: #8b5ebf;
+  --primary-color-hover-rgb: 139, 94, 191;
+  --primary-color-hover-rgba: rgba(139, 94, 191, 1);
+  --primary-color-hover-hsl: hsl(270, 40%, 60%);
+}
